@@ -3,7 +3,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
-const StyleLintPlugin = require('stylelint-webpack-plugin');
+// const StyleLintPlugin = require('stylelint-webpack-plugin');
 
 module.exports = {
   context: __dirname,
@@ -57,13 +57,13 @@ module.exports = {
     ]
   },
   plugins: [
-    new StyleLintPlugin(),
+    // new StyleLintPlugin(),
     new MiniCssExtractPlugin({
       filename: '[name].css'
     }),
     new BrowserSyncPlugin({
       files: '**/*.php',
-      proxy: 'http://one.wordpress.test'
+      proxy: 'http://wp101.test'
     })
   ],
   optimization: {
